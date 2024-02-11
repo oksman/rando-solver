@@ -1,5 +1,5 @@
 ```mermaid
-%%{init: {'theme': 'forest'} }%%
+%%{init: {'theme': 'dark'} }%%
 
 gantt
     title SmartMet Server Roadmap
