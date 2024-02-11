@@ -1,20 +1,26 @@
 ```mermaid
-%%{init: {'theme': 'dark' } }%%
+%%{init: {'theme': 'forest'} }%%
 
 gantt
     title SmartMet Server Roadmap
     dateFormat YYYY-MM
+
     section Metadata
         Define metadata location :define-metadata, 2024-03, 30d
         Implement support :implement-metadata, after define, 60d
         Translations :translations, 2024-04, 2024-09
+        Atmos Release :milestone, 2024-11, 0d
+
     section EDR API
         Enhancements :edr-enhancements, 2024-03, 2024-06
     section LUA Support
         WMS Support :lua-wms, 2024-03, 30d
-        Level Data?  :after lua-wms, 30d
+        Level Data? :level-data, after lua-wms, 30d
+
     section Authorization
         Limit data per apikey :auth-limit, 2024-03, 2024-09
+        Atmos Release :milestone, 2024-11, 0d
+
     section Data Issues
         Zarr :zarr, 2024-09, 2024-12
         Kerchunk :kerchunk, 2024-09, 2024-12
@@ -26,6 +32,7 @@ gantt
     section Deployment
         Helm Chart :helm-chart, 2024-02, 2024-04
         Ansible :ansible, 2024-02, 2024-05
+        RHEL 7 EOL :milestone, 2024-07, 0d
         Instance per data :instance-per-data, 2024-09, 2025-03
     section Observability
         OpenTelemetry :opentelemetry, 2024-06, 2024-12
